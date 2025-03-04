@@ -18,9 +18,11 @@ struct HourConversionView: View {
             //1. show our result if one exsits
             if let conversionResult = viewModel.conversionResult {
                 
-                Text("\(conversionResult.timeInHours)")
-                Text("\(conversionResult.timeInSeconds)")
-                Text("\(conversionResult.timeInMinutes)")
+                Text("\(conversionResult.timeInHours.formatted())")
+                Text("\(conversionResult.timeInMinutes.formatted()) minutes")
+                Text("\(conversionResult.timeInSeconds.formatted()) seconds")
+             
+        
                 
                 
                 

@@ -13,6 +13,12 @@ struct HourConversionView: View {
     
     //MARK: Computed Properties
     var body: some View {
-    
+        Text("Hello World")
     }
+}
+
+
+
+#Preview {
+    HourConversionView()
 }

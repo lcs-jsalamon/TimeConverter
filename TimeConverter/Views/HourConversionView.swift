@@ -27,10 +27,6 @@ struct HourConversionView: View {
                     Text("Save Result")
                 }
                 .buttonStyle(.borderedProminent)
-
-        
-                
-                
                 
             } else {
                 //2. show the content unavaible message
@@ -40,6 +36,21 @@ struct HourConversionView: View {
             
             // 3. allow for input to occur
             TextField("Enter the time in hours", text: $viewModel.providedHours)
+            
+            //Show history label
+            HStack{
+                Text("History")
+                    .bold()
+                Spacer()
+                
+                List(viewModel.resultHistory) { currentResult in
+                    VStack{
+                        Text("\(currentResult.timeInHours.formatted())")
+                        Text("\(currentResult.timeInMinutes.formatted()) minutes")
+                        Text("\(currentResult.timeInSeconds.formatted()) seconds")
+                    }
+                }
+            }
         }
     }
 }

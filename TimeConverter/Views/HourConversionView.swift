@@ -21,7 +21,13 @@ struct HourConversionView: View {
                 Text("\(conversionResult.timeInHours.formatted())")
                 Text("\(conversionResult.timeInMinutes.formatted()) minutes")
                 Text("\(conversionResult.timeInSeconds.formatted()) seconds")
-             
+                Button {
+                    viewModel.saveResult()
+                } label: {
+                    Text("Save Result")
+                }
+                .buttonStyle(.borderedProminent)
+
         
                 
                 
